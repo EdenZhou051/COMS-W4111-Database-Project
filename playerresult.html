@@ -1,0 +1,52 @@
+<html>
+  <style>
+    body{ 
+      font-size: 15pt;
+      font-family: arial;
+    }
+  </style>
+
+
+<body>
+  <h1>Search results for {{name}}</h1>
+<p><a href="/team">teams</a></p>
+<p><a href="/player">player</a><p>
+<p><a href="/playoff">2019 playoff</a></p>
+  
+
+<table width="400" border="1" class="table">
+  <tr>
+    <th>Name</th>
+    <th>Team</th> 
+  </tr>
+  {% for n in data %}
+  <tr>
+    <td><a href="/playerinfo/{{n.playerid}}">{{n.pname}}</a></td>
+    <td><a href="/team/{{n.teamid}}">{{n.tname}}</a></td>
+  </tr>  
+  {% endfor %}
+</table>
+
+<!--
+<div>{{data}}</div>
+-->
+<!--
+  <div>
+    {% for n in data %}
+    <div>{{n.name}} {{n.conference}} {{n.division}}</div>
+    {% endfor %}
+  </div>
+
+<div>
+
+<p><a href="another">Go to the other page</a></p>
+
+<form method="POST" action="/search">
+<p>Name of new computer scientist: <input type="text" name="name"> <input type="submit" value="Add"></p>
+</form> 
+-->
+
+</body>
+
+
+</html>

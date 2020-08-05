@@ -1,0 +1,188 @@
+<html>
+  <style>
+    body{ 
+      font-size: 15pt;
+      font-family: arial;
+    }
+  </style>
+
+
+<body>
+    <h1>{{hometeam[0].name}} v {{awayteam[0].name}}</h1>
+<p><a href="/team">teams</a></p>
+<p><a href="/player">player</a><p>
+<p><a href="/playoff">2019 playoff</a></p>
+  
+
+
+  <p>{{hometeam[0].name}}</p>
+  <table width="1000" border="1" class="table">
+    <tr>
+      <th>name</th>
+      <th>minute</th>
+      <th>fg</th>
+      <th>fga</th>
+      <th>fg%</th>
+      <th>3pt</th>
+      <th>3pta</th>
+      <th>3pt%</th>
+      <th>ft</th>
+      <th>fta</th>
+      <th>ft%</th>
+      <th>orb</th>
+      <th>drb</th>
+      <th>ast</th>
+      <th>stl</th>
+      <th>blk</th>
+      <th>tov</th>
+      <th>foul</th>
+      <th>pts</th>
+      <th>+/-</th>
+    </tr>
+    {% for n in homepersonal %}
+    <tr>
+    <td><a href="/playerinfo/{{n.playerid}}">{{n.name}}</a></td>
+    <td>{{n.minute}}</td>
+    <td>{{n.fg}}</td>
+    <td>{{n.fga}}</td>
+    <td>{{n.fgp}}</td>
+    <td>{{n.tpt}}</td>
+    <td>{{n.tpta}}</td>
+    <td>{{n.tptp}}</td>
+    <td>{{n.ft}}</td>
+    <td>{{n.fta}}</td>
+    <td>{{n.ftg}}</td>
+    <td>{{n.orb}}</td>
+    <td>{{n.drb}}</td>
+    <td>{{n.ast}}</td>
+    <td>{{n.stl}}</td>
+    <td>{{n.blk}}</td>
+    <td>{{n.tov}}</td>
+    <td>{{n.psf}}</td>
+    <td>{{n.pts}}</td>
+    <td>{{n.plusminus}}</td>
+    </tr>
+    {% endfor %}
+    {% for n in hometeam%}
+    <tr>
+    <td>{{n.name}}</td>
+    <td>-</td>
+    <td>{{n.fg}}</td>
+    <td>{{n.fga}}</td>
+    <td>{{n.fgp}}</td>
+    <td>{{n.tpt}}</td>
+    <td>{{n.tpta}}</td>
+    <td>{{n.tptp}}</td>
+    <td>{{n.ft}}</td>
+    <td>{{n.fta}}</td>
+    <td>{{n.ftp}}</td>
+    <td>{{n.orb}}</td>
+    <td>{{n.drb}}</td>
+    <td>{{n.ast}}</td>
+    <td>{{n.stl}}</td>
+    <td>{{n.blk}}</td>
+    <td>{{n.tov}}</td>
+    <td>{{n.foul}}</td>
+    <td>{{n.pts}}</td>
+    <td>{{n.winloss}}</td>
+    </tr>
+    {%endfor%}
+</table>
+
+  <p>{{awayteam[0].name}}</p>
+    <table width="1000" border="1" class="table">
+      <tr>
+        <th>name</th>
+        <th>minute</th>
+        <th>fg</th>
+        <th>fga</th>
+        <th>fg%</th>
+        <th>3pt</th>
+        <th>3pta</th>
+        <th>3pt%</th>
+        <th>ft</th>
+        <th>fta</th>
+        <th>ft%</th>
+        <th>orb</th>
+        <th>drb</th>
+        <th>ast</th>
+        <th>stl</th>
+        <th>blk</th>
+        <th>tov</th>
+        <th>foul</th>
+        <th>pts</th>
+        <th>+/-</th>
+      </tr>
+      {% for n in awaypersonal %}
+      <tr>
+      <td><a href="/playerinfo/{{n.playerid}}">{{n.name}}</a></td>
+      <td>{{n.minute}}</td>
+      <td>{{n.fg}}</td>
+      <td>{{n.fga}}</td>
+      <td>{{n.fgp}}</td>
+      <td>{{n.tpt}}</td>
+      <td>{{n.tpta}}</td>
+      <td>{{n.tptp}}</td>
+      <td>{{n.ft}}</td>
+      <td>{{n.fta}}</td>
+      <td>{{n.ftg}}</td>
+      <td>{{n.orb}}</td>
+      <td>{{n.drb}}</td>
+      <td>{{n.ast}}</td>
+      <td>{{n.stl}}</td>
+      <td>{{n.blk}}</td>
+      <td>{{n.tov}}</td>
+      <td>{{n.psf}}</td>
+      <td>{{n.pts}}</td>
+      <td>{{n.plusminus}}</td>
+      </tr>
+      {% endfor %}
+      {% for n in awayteam%}
+      <tr>
+      <td>{{n.name}}</td>
+      <td>-</td>
+      <td>{{n.fg}}</td>
+      <td>{{n.fga}}</td>
+      <td>{{n.fgp}}</td>
+      <td>{{n.tpt}}</td>
+      <td>{{n.tpta}}</td>
+      <td>{{n.tptp}}</td>
+      <td>{{n.ft}}</td>
+      <td>{{n.fta}}</td>
+      <td>{{n.ftp}}</td>
+      <td>{{n.orb}}</td>
+      <td>{{n.drb}}</td>
+      <td>{{n.ast}}</td>
+      <td>{{n.stl}}</td>
+      <td>{{n.blk}}</td>
+      <td>{{n.tov}}</td>
+      <td>{{n.foul}}</td>
+      <td>{{n.pts}}</td>
+      <td>{{n.winloss}}</td>
+      </tr>
+      {%endfor%}
+  </table>
+
+<!--
+<div>{{data}}</div>
+-->
+<!--
+  <div>
+    {% for n in data %}
+    <div>{{n.name}} {{n.conference}} {{n.division}}</div>
+    {% endfor %}
+  </div>
+
+<div>
+
+<p><a href="another">Go to the other page</a></p>
+
+<form method="POST" action="/search">
+<p>Name of new computer scientist: <input type="text" name="name"> <input type="submit" value="Add"></p>
+</form> 
+-->
+
+</body>
+
+
+</html>
